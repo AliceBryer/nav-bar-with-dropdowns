@@ -1,3 +1,10 @@
+font-family: "Heebo", sans-serif;
+font-family: "Josefin Sans", sans-serif;
+font-family: "Montserrat", sans-serif;
+font-family: "Poiret One", cursive;
+font-family: "Raleway", sans-serif;
+font-family: "Roboto", sans-serif;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +13,58 @@
 
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
   height: 10vh;
+  width: 100%;
   background: rgb(59, 59, 74);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+/* hamburger styling */
+.hamburger {
+  width: 5%;
+  height: 60%;
+  margin: 10%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  width: 100%;
+  height: 15%;
+  margin: 2px;
+  background-color: white;
+}
+
+/* container 1  */
+.links-container {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+}
+
+/* container 2 */
+.logo-container {
+  width: 25%;
+  height: 100%;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-items: flex-start;
+  margin-left: 1rem;
 }
 
 .nav-links {
@@ -18,9 +72,9 @@ nav {
   list-style: none;
   width: 80%;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin: auto;
+  font-family: "Poiret One", cursive;
 }
 
 .nav-links li a {
@@ -29,12 +83,35 @@ nav {
   font-size: 1.5rem;
 }
 
-.dropbtn {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  background-color: rgb(59, 59, 74);
-  border: none;
-  cursor: pointer;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+#logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  border-radius: 100%;
+  border: dashed white 3px;
+}
+
+#businessName {
+  font-family: "Poiret One", cursive;
+  margin: 10px;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  #businessName {
+    font-size: 1.5rem;
+  }
+
+  .links-container {
+    display: none;
+  }
+
+  .logo-container {
+    width: 75%;
+  }
 }
